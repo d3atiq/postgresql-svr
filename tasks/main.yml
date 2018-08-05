@@ -1,6 +1,6 @@
 ---
-# tasks file for nodejs
-- name: Add Nodesource package signing key
+# tasks file for postgresql-svr
+- name: Add PostgreSQL package signing key
   become: true
   apt_key:
     url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
