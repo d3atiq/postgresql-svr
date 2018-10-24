@@ -20,7 +20,5 @@
 - name: Install PostgreSQL apt package
   become: true
   apt:
-    name: "{{ item }}"
+    name: "postgresql-{{ postgresql.version }}"
     state: present
-  with_items:
-    - "postgresql-{{ postgresql.version }}"
