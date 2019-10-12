@@ -1,5 +1,12 @@
 ---
 # tasks file for postgresql-svr
+- name: Pre-req tools
+  become: true
+  apt:
+    update_cache: yes
+    name: gnupg
+    state: present
+    
 - name: Add PostgreSQL package signing key
   become: true
   apt_key:
